@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piškvorky</title>
     <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+body{
+  background-color: #B83;
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   background-color: #000000;
-  padding: 10px;
+  width: 100vw;
+  
 }
 .grid-item {
-  background-color: rgba(201, 201, 201, 0.8);
+  background-color: #B83;
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 145px;
-  font-size: 30px;
+  height: 33vh;
+  font-size: 10.5vw;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:sans-serif;
+
+
 }
 #body > p{
   font-size: 10em;
   font-family: sans-serif;
+  display: flex;
 
 }
 button{
   width: 400px;
   height: 150px;
+  background-color: #961;
 
 }
 .bot{
@@ -38,6 +54,53 @@ button{
 }
 button > p{
   font-size: 50px;
+}
+
+
+@media screen and (max-width:1800px) {
+  .grid-item {
+  font-size: 12.5vw;
+}
+
+}
+
+
+
+
+@media screen and (max-width:960px) {
+  .grid-item {
+  font-size: 17.5vw;
+  
+}
+#body > p{
+  font-size: 7em;
+}
+
+}
+
+
+@media screen and (max-width:480px) {
+  .grid-item {
+  font-size: 20.5vw;
+}
+#body > p{
+  font-size: 5em;
+
+
+}
+
+}
+@media screen and (max-width:420px) {
+  button > p{
+  font-size: 35px;
+}
+button{
+  width: 325px;
+  height: 125px;
+
+
+}
+
 }
 
 
@@ -72,7 +135,6 @@ let blok8 = 0
 let blok9 = 0
 
 
-
 let first= document.getElementById("first");
 let sec= document.getElementById("sec");
 let tr= document.getElementById("tr");
@@ -84,14 +146,15 @@ let ei= document.getElementById("ei");
 let nein= document.getElementById("nein");
 let hrac = 1;
 function Kakabus(){
-
 if (hrac == 1 && blok1 ==0) {
-  first.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  first.appendChild(X)
   hrac++
   console.log(hrac)
   blok1++
 } else if (hrac == 2 && blok1 == 0) {
-  first.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  first.appendChild(O)
   hrac--
   console.log(hrac)
   blok1 += 2
@@ -100,12 +163,14 @@ if (hrac == 1 && blok1 ==0) {
 function Kakabus2(){
 
 if (hrac == 1 && blok2 ==0) {
-  sec.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  sec.appendChild(X)
   hrac++
   console.log(hrac)
   blok2++
 } else if (hrac == 2 && blok2 == 0) {
-  sec.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  sec.appendChild(O)
   hrac--
   console.log(hrac)
   blok2 += 2
@@ -113,12 +178,14 @@ if (hrac == 1 && blok2 ==0) {
 function Kakabus3(){
 
 if (hrac == 1 && blok3 == 0) {
-  tr.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  tr.appendChild(X)
   hrac++
   console.log(hrac)
   blok3++
 } else if (hrac == 2 && blok3 ==0) {
-  tr.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  tr.appendChild(O)
   hrac--
   console.log(hrac)
   blok3 += 2
@@ -126,12 +193,14 @@ if (hrac == 1 && blok3 == 0) {
 function Kakabus4(){
 
 if (hrac == 1 && blok4 ==0) {
-  fr.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  fr.appendChild(X)
   hrac++
   console.log(hrac)
   blok4++
 } else if (hrac == 2 && blok4 == 0) {
-  fr.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  fr.appendChild(O)
   hrac--
   console.log(hrac)
   blok4 += 2
@@ -140,12 +209,14 @@ if (hrac == 1 && blok4 ==0) {
 function Kakabus5(){
 
 if (hrac == 1 && blok5 == 0) {
-  fi.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  fi.appendChild(X)
   hrac++
   console.log(hrac)
   blok5++
 } else if (hrac == 2 && blok5 == 0) {
-  fi.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  fi.appendChild(O)
   hrac--
   console.log(hrac)
   blok5 += 2
@@ -153,12 +224,14 @@ if (hrac == 1 && blok5 == 0) {
 function Kakabus6(){
 
 if (hrac == 1 && blok6 == 0) {
-  six.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  six.appendChild(X)
   hrac++
   console.log(hrac)
   blok6++
 } else if (hrac == 2 && blok6 == 0) {
-  six.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  six.appendChild(O)
   hrac--
   console.log(hrac)
   blok6 += 2
@@ -166,12 +239,14 @@ if (hrac == 1 && blok6 == 0) {
 function Kakabus7(){
 
 if (hrac == 1 && blok7 ==0) {
-  sev.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  sev.appendChild(X)
   hrac++
   console.log(hrac)
   blok7++
 } else if (hrac == 2 && blok7 ==0) {
-  sev.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  sev.appendChild(O)
   hrac--
   console.log(hrac)
   blok7 +=2
@@ -179,12 +254,14 @@ if (hrac == 1 && blok7 ==0) {
 function Kakabus8(){
 
 if (hrac == 1 && blok8==0) {
-  ei.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  ei.appendChild(X)
   hrac++
   console.log(hrac)
   blok8++
 } else if (hrac == 2 && blok8 == 0) {
-  ei.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  ei.appendChild(O)
   hrac--
   console.log(hrac)
   blok8 +=2
@@ -192,12 +269,14 @@ if (hrac == 1 && blok8==0) {
 function Kakabus9(){
 
 if (hrac == 1 && blok9 ==0) {
-  nein.style.backgroundColor= "red";
+  const X = document.createTextNode("X")
+  nein.appendChild(X)
   hrac++
   console.log(hrac)
   blok9++
 } else if (hrac == 2 && blok9 == 0) {
-  nein.style.backgroundColor= "green";
+  const O = document.createTextNode("O")
+  nein.appendChild(O)
   hrac--
   console.log(hrac)
   blok9 += 2
@@ -218,7 +297,7 @@ const txt = document.createTextNode("Hrát znovu?")
 para4.appendChild(txt)
 
 const odkaz = document.createElement("a")
-odkaz.href="http://martinkonarek29.github.io/Piskvorky"
+odkaz.href="http://127.0.0.1:5500/ttt%201.html"
 const btn =document.createElement("button")
 btn.type="submit"
 btn.appendChild(para4)
@@ -232,7 +311,10 @@ function End2(){
   body.style.display="flex"
   body.style.justifyContent="center"
   body.style.alignItems="center"
+  body.style.textAlign="center"
   bot.appendChild(odkaz)
+  bot.style.margin="200px"
+  body.style.margin="200px"
 }
 function End3(){
   body.innerHTML=""
@@ -240,7 +322,10 @@ function End3(){
   body.style.display="flex"
   body.style.justifyContent="center"
   body.style.alignItems="center"
+  body.style.textAlign="center"
   bot.appendChild(odkaz)
+  bot.style.margin="200px"
+  body.style.margin="200px"
 }
 function Draw() {
   body.innerHTML=""
@@ -248,7 +333,10 @@ function Draw() {
   body.style.display="flex"
   body.style.justifyContent="center"
   body.style.alignItems="center"
+  body.style.textAlign="center"
   bot.appendChild(odkaz)
+  bot.style.margin="200px"
+  body.style.margin="200px"
 }
 
 
