@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piškvorky</title>
+    <style>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #000000;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(201, 201, 201, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 145px;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+#body > p{
+  font-size: 10em;
+  font-family: sans-serif;
+
+}
+button{
+  width: 400px;
+  height: 150px;
+
+}
+.bot{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+}
+button > p{
+  font-size: 50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="body" class="body">
+      <div class="grid-container">
+        <div id="first" class="grid-item"  onclick="Kakabus();End()"></div>
+        <div id="sec" class="grid-item" onclick="Kakabus2();End()"></div>
+        <div id="tr" class="grid-item" onclick="Kakabus3();End()"></div>  
+        <div id="fr" class="grid-item" onclick="Kakabus4();End()"></div>
+        <div id="fi" class="grid-item" onclick="Kakabus5();End()"></div>
+        <div id="six" class="grid-item" onclick="Kakabus6();End()"></div>  
+        <div id="sev" class="grid-item" onclick="Kakabus7();End()"></div>
+        <div id="ei" class="grid-item" onclick="Kakabus8();End()"></div>
+        <div id="nein" class="grid-item" onclick="Kakabus9();End()"></div>  
+      </div>
+      
+    </div>
+    <div id="bot" class="bot"></div>
+
+<script>
+let blok1 = 0
+let blok2 = 0
+let blok3 = 0
+let blok4 = 0
+let blok5 = 0
+let blok6 = 0
+let blok7 = 0
+let blok8 = 0
+let blok9 = 0
+
+
+
+let first= document.getElementById("first");
+let sec= document.getElementById("sec");
+let tr= document.getElementById("tr");
+let fr= document.getElementById("fr");
+let fi= document.getElementById("fi");
+let six= document.getElementById("six");
+let sev= document.getElementById("sev");
+let ei= document.getElementById("ei");
+let nein= document.getElementById("nein");
+let hrac = 1;
+function Kakabus(){
+
+if (hrac == 1 && blok1 ==0) {
+  first.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok1++
+} else if (hrac == 2 && blok1 == 0) {
+  first.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok1 += 2
+}
+};
+function Kakabus2(){
+
+if (hrac == 1 && blok2 ==0) {
+  sec.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok2++
+} else if (hrac == 2 && blok2 == 0) {
+  sec.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok2 += 2
+}};
+function Kakabus3(){
+
+if (hrac == 1 && blok3 == 0) {
+  tr.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok3++
+} else if (hrac == 2 && blok3 ==0) {
+  tr.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok3 += 2
+}};
+function Kakabus4(){
+
+if (hrac == 1 && blok4 ==0) {
+  fr.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok4++
+} else if (hrac == 2 && blok4 == 0) {
+  fr.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok4 += 2
+  
+}};
+function Kakabus5(){
+
+if (hrac == 1 && blok5 == 0) {
+  fi.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok5++
+} else if (hrac == 2 && blok5 == 0) {
+  fi.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok5 += 2
+}};
+function Kakabus6(){
+
+if (hrac == 1 && blok6 == 0) {
+  six.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok6++
+} else if (hrac == 2 && blok6 == 0) {
+  six.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok6 += 2
+}};
+function Kakabus7(){
+
+if (hrac == 1 && blok7 ==0) {
+  sev.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok7++
+} else if (hrac == 2 && blok7 ==0) {
+  sev.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok7 +=2
+}};
+function Kakabus8(){
+
+if (hrac == 1 && blok8==0) {
+  ei.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok8++
+} else if (hrac == 2 && blok8 == 0) {
+  ei.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok8 +=2
+}};
+function Kakabus9(){
+
+if (hrac == 1 && blok9 ==0) {
+  nein.style.backgroundColor= "red";
+  hrac++
+  console.log(hrac)
+  blok9++
+} else if (hrac == 2 && blok9 == 0) {
+  nein.style.backgroundColor= "green";
+  hrac--
+  console.log(hrac)
+  blok9 += 2
+}};
+const para = document.createElement("p");
+const textNode = document.createTextNode("Hráč 1 Vyhrál");
+para.appendChild(textNode);
+const para2 = document.createElement("p");
+const textNode2 = document.createTextNode("Hráč 2 Vyhrál");
+para2.appendChild(textNode2);
+const para3 = document.createElement("p");
+const textNode3 = document.createTextNode("Remíza");
+para3.appendChild(textNode3);
+const body = document.getElementById("body")
+const para4 = document.createElement("p");
+
+const txt = document.createTextNode("Hrát znovu?")
+para4.appendChild(txt)
+
+const odkaz = document.createElement("a")
+odkaz.href="http://127.0.0.1:5500/ttt%201.html"
+const btn =document.createElement("button")
+btn.type="submit"
+btn.appendChild(para4)
+odkaz.appendChild(btn)
+
+const bot = document.getElementById("bot")
+
+function End2(){
+  body.innerHTML=""
+  body.appendChild(para)
+  body.style.display="flex"
+  body.style.justifyContent="center"
+  body.style.alignItems="center"
+  bot.appendChild(odkaz)
+}
+function End3(){
+  body.innerHTML=""
+  body.appendChild(para2)
+  body.style.display="flex"
+  body.style.justifyContent="center"
+  body.style.alignItems="center"
+  bot.appendChild(odkaz)
+}
+function Draw() {
+  body.innerHTML=""
+  body.appendChild(para3)
+  body.style.display="flex"
+  body.style.justifyContent="center"
+  body.style.alignItems="center"
+  bot.appendChild(odkaz)
+}
+
+
+
+function End() {
+if (blok1 == 1 && blok2 ==1 && blok3 ==1){
+  End2()
+} else if (blok1 == 2 && blok2 ==2 && blok3 ==2) {
+  End3()
+} else if (blok4 == 2 && blok5 ==2 && blok6 ==2) {
+  End3()
+} else if (blok7 == 2 && blok8 ==2 && blok9 ==2) {
+  End3()
+} else if (blok4 == 1 && blok5 ==1 && blok6 ==1) {
+  End2()
+} else if (blok7 == 1 && blok8 ==1 && blok9 ==1) {
+  End2()
+} else if (blok1 == 1 && blok4 ==1 && blok7 ==1) {
+  End2()
+} else if (blok2 == 1 && blok5 ==1 && blok8 ==1) {
+  End2()
+} else if (blok3 == 1 && blok6 ==1 && blok9 ==1) {
+  End2()
+} else if (blok1 == 2 && blok4 ==2 && blok7 ==2) {
+  End3()
+} else if (blok2 == 2 && blok5 ==2 && blok8 ==2) {
+  End3()
+} else if (blok3 == 2 && blok6 ==2 && blok9 ==2) {
+  End3()
+} else if (blok1 == 1 && blok5 ==1 && blok9 ==1) {
+  End2()
+} else if (blok3 == 1 && blok5 ==1 && blok7 ==1) {
+  End2()
+} else if (blok1 == 2 && blok5 ==2 && blok9 ==2) {
+  End3()
+} else if (blok3 == 2 && blok5 ==2 && blok7 ==2) {
+  End3()
+} else if (blok1 > 0 && blok2 > 0 && blok3 > 0 && blok4 > 0 && blok5 > 0 && blok6 > 0 && blok7 > 0 && blok8 > 0 && blok9 > 0) {
+  Draw()
+}
+
+
+
+}
+</script>
+
+
+</body>
+</html>
